@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "serve": "webpack-dev-server --content-base src --progress --watch --history-api-fallback --inline --hot --host 0.0.0.0 --port 9090"
+    "serve": "webpack-dashboard -- webpack-dev-server --content-base src --progress --watch --history-api-fallback --inline --hot --host 0.0.0.0 --port 9090"
   },
   "repository": {
     "type": "git",
@@ -53,6 +53,7 @@
     "json-loader": "^0.5.4",
     "style-loader": "^0.13.0",
     "webpack": "^1.13.3",
+    "webpack-dashboard": "^0.2.0",
     "webpack-dev-server": "^1.14.0"
   }
 }

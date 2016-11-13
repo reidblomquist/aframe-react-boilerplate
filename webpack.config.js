@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var DashboardPlugin = require('webpack-dashboard/plugin');
 require('babel-polyfill');
 
 var IS_PRODUCTION = process.env.NODE_ENV === 'production';
@@ -12,7 +13,7 @@ var APP_DIR = path.resolve(__dirname, 'src/js');
 //   'babel?cacheDirectory&presets[]=react,presets[]=es2015,presets[]=stage-0'
 // ];
 
-var PLUGINS = [];
+var PLUGINS = [new DashboardPlugin()];
 if (IS_PRODUCTION) {
   // Uglify in production.
   PLUGINS.push(
